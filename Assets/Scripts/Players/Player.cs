@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int _crystallsCount;
+
+    private void Start()
     {
-        
+        _crystallsCount = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddCrystall()
     {
-        
+        _crystallsCount++;
+        Debug.Log(gameObject.name + ": " + _crystallsCount);
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }
